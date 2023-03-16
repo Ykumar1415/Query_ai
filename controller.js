@@ -1,9 +1,9 @@
-// *********chat AI CODE
-const OPENAI_API_KEY = "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";
+const OPENAI_API_KEY = process.env.uri;
 const { Configuration, OpenAIApi } = require("openai");
 const configuration = new Configuration({
   apiKey: OPENAI_API_KEY,
 });
+
 
 const openai = new OpenAIApi(configuration);
 exports.chai = async (req, res) => {
