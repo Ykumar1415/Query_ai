@@ -7,10 +7,10 @@ const configuration = new Configuration({
 
 const openai = new OpenAIApi(configuration);
 exports.chai = async (req, res) => {
-console.log(req.body)
-  const question = req.body.quis;
 
-  try {
+
+  try { console.log(req.body)
+  const question = req.body.quis;
     const result = await openai.createCompletion({
       model: "text-davinci-003",
       prompt: question,
