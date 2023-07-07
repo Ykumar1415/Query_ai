@@ -5,7 +5,13 @@ env.config();
 const port = 2000;
 const cors = require('cors');
 // use cors 
-app.use(cors());
+
+const corsOptions = {
+  origin: '*'
+};
+
+app.use(cors(corsOptions));
+
 // allow to send request from client 
 app.use(express.json());
 
